@@ -1,24 +1,21 @@
-Name: Mahek Vora
-Roll number: 200101062
-Language used: C
-Operating System used: Linux Ubuntu
+# Shell In C
+
+## Language used: C
+## Operating System used: Linux Ubuntu
 ----------------------------------------------------------------------------------------------------------------------------------------------
-Execution:
+### Execution
+```
 
 gcc 200101062_Assign02.c -lreadline
 ./a.out 200101062_Assign02.c
+```
 
 
-The execution file(a.out) has also been provided along with the C file and this README.txt file.
-
-
-This file will work as expected if it is run on the  linux terminal by the above commands.
-If the program does not prompt for input after a particular command, kindly re-execute it after pressing ctrl+C to try the next command
-(This may happen in single and double piping.)
 ----------------------------------------------------------------------------------------------------------------------------------------------
-Features of the shell:
+### Features of the shell
 ----------------------------------------------------------------------------------------------------------------------------------------------
 Envionment variables-> They can be accessed using printenv or echo, new variables can be declared, which is handled using setenv
+```
 USER
 HOME
 SHELL
@@ -26,8 +23,10 @@ TERM
 PATH
 LANG
 PWD
+```
 ----------------------------------------------------------------------------------------------------------------------------------------------
-Internal commands executed->
+### Internal commands executed
+```
 cd                : has been implemented using chdir() function
 history           : prints the contents of the history file, which includes all commands given till that time.
 quit or exit or x : removes history file as required by flowchart.
@@ -43,8 +42,12 @@ setenv            : Can set a new value to an new variable.
 		     VARIABLE=value
 		     
 		     The program detects the presence of = and creates a new variable, just as it happens in a normal linux terminal.
+```
+
 ----------------------------------------------------------------------------------------------------------------------------------------------
-Linux Commands executed -> They have been implemented using the exec family of functions.
+### Linux Commands executed 
+They have been implemented using the exec family of functions.
+```
 ls
 cat
 passwd
@@ -71,16 +74,21 @@ which
 shutdown
 chmod
 whereis
+```
 ----------------------------------------------------------------------------------------------------------------------------------------------
-Redirection -> NOTE: All of these have been executed for external commands only.Thus they will not work for echo, cd, setenv, printenv, history.
+### Redirection 
+NOTE: All of these have been executed for external commands only.Thus they will not work for echo, cd, setenv, printenv, history.
 		It works well for all external commands.
+
+```
 Single level piping eg. ls | grep D
 Double level piping eg. ls | grep D | wc
 Single level input redirection eg. cat <input1.txt
 Single level output redirection eg. ls >output1.txt
 Single level output redirection to append eg. ls >>output1.txt
+```
 ----------------------------------------------------------------------------------------------------------------------------------------------
-Overview of the program
+### Overview of the program
 In the main function :
 1. memory has been allocated for reading input
 2. If input is not empty, it is added to history file as required
